@@ -1,0 +1,137 @@
+{
+  "title": "event",
+  "description": "A raw event from the database",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": ["click", "cms", "form", "keyboard", "view"]
+    },
+    "css_class": {
+      "type": "string"
+    },
+    "css_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "value": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "format": "hostname"
+    },
+    "site_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "visitor_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "path": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ip_address": {
+      "type": "string",
+      "format": "ip-address"
+    },
+    "referer": {
+      "type": "string",
+      "format": "url"
+    },
+    "device_id": {
+      "type": "string"
+    },
+    "cms_webflow_collection_id": {
+      "type": "string"
+    },
+    "cms_webflow_item_id": {
+      "type": "string"
+    },
+    "device_client_type": {
+      "type": "string"
+    },
+    "device_client_name": {
+      "type": "string"
+    },
+    "device_client_version": {
+      "type": "string"
+    },
+    "device_client_engine": {
+      "type": "string"
+    },
+    "device_client_engine_version": {
+      "type": "string"
+    },
+    "device_os_name": {
+      "type": "string"
+    },
+    "device_os_version": {
+      "type": "string"
+    },
+    "device_os_platform": {
+      "type": "string"
+    },
+    "device_type": {
+      "type": "string"
+    },
+    "device_brand": {
+      "type": "string"
+    },
+    "device_model": {
+      "type": "string"
+    },
+    "device_user_agent": {
+      "type": "string"
+    },
+    "form_displayed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "form_last_interaction_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "form_submitted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "geo_ip_country": {
+      "type": "string"
+    },
+    "geo_ip_city": {
+      "type": "string"
+    },
+    "geo_ip_latitude": {
+      "type": "string"
+    },
+    "geo_ip_longitude": {
+      "type": "string"
+    },
+    "geo_ip_region": {
+      "type": "string"
+    },
+    "geo_ip_eu": {
+      "type": "string"
+    },
+    "geo_ip_timezone": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "created_at", "site_id", "event_type", "visitor_id"]
+}

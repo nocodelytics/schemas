@@ -1,0 +1,90 @@
+{
+  "title": "eventsQueueInput",
+  "description": "A raw event inserted into the queue, waiting to be processed",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "The unique identifier for an event.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "createdAt": {
+      "description": "The date the event was first received by the api.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "userAgent": {
+      "description": "The user agent that originated the event.",
+      "type": "string"
+    },
+    "s": {
+      "description": "The site id the event is coming from.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "t": {
+      "description": "The event type: click, cms, form, keyboard, view.",
+      "type": "string",
+      "enum": ["c", "m", "f", "k", "v"]
+    },
+    "p": {
+      "description": "The path (e.g /pricing) the event originated from.",
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "c": {
+      "description": "The css class(es) of the html element interacted with.",
+      "type": "string"
+    },
+    "i": {
+      "description": "The css id(s) of the html element interacted with.",
+      "type": "string"
+    },
+    "va": {
+      "description": "Any value attached to the event. E.g the value of a html input.",
+      "type": ["string", "null"]
+    },
+    "v": {
+      "description": "The ID of the visitor creating the event",
+      "type": "string",
+      "format": "uuid"
+    },
+    "r": {
+      "description": "The referer (e.g google.com)",
+      "type": "string",
+      "format": "url"
+    },
+    "f": {
+      "description": "The form stage. Progresses as the user interact with the form.",
+      "type": "string",
+      "enum": ["d", "i", "s"]
+    },
+    "is": {
+      "description": "The CMS item slug. This is provided by the user with the css class 'nocodelytics-list-item'.",
+      "type": "string"
+    },
+    "cl": {
+      "description": "The index position of HTML element for the CMS list.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    },
+    "ci": {
+      "description": "The index position of HTML element for the CMS item.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    },
+    "d": {
+      "description": "The domain the event is coming from",
+      "type": "string",
+      "format": "hostname"
+    },
+    "ip": {
+      "description": "The ip address that originated the event.",
+      "type": "string"
+    }
+  },
+  "required": ["s", "createdAt", "t", "p", "v"]
+}
