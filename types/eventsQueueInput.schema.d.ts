@@ -18,6 +18,10 @@ export interface EventsQueueInput {
    */
   createdAt: string;
   /**
+   * The user agent that originated the event.
+   */
+  userAgent?: string;
+  /**
    * The site id the event is coming from.
    */
   s: string;
