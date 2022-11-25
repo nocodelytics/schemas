@@ -2,7 +2,6 @@
   "name": "@nocodelytics/schemas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "vitest",
     "json2ts": "json2ts -i schemas/ -o types/",
