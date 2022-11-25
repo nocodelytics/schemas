@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest";
 
-import eventsQueueInputSchema from "../schemas/eventsQueueInput.schema.json";
+import eventsQueueInputSchema from "../jsonSchemas/eventsQueueInput.schema.json";
 
 import Ajv from "ajv";
 
