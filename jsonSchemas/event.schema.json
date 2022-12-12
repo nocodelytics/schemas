@@ -24,8 +24,7 @@
       "type": "string"
     },
     "css_id": {
-      "type": "string",
-      "format": "uuid"
+      "type": "string"
     },
     "value": {
       "type": "string"
@@ -127,7 +126,7 @@
       "type": "string"
     },
     "geo_ip_eu": {
-      "type": "string"
+      "type": "boolean"
     },
     "geo_ip_timezone": {
       "type": "string"

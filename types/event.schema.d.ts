@@ -45,6 +45,6 @@ export interface Event {
   geo_ip_latitude?: string;
   geo_ip_longitude?: string;
   geo_ip_region?: string;
-  geo_ip_eu?: string;
+  geo_ip_eu?: boolean;
   geo_ip_timezone?: string;
 }

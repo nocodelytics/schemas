@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "vitest",
-    "json2ts": "json2ts -i schemas/ -o types/",
+    "json2ts": "json2ts -i jsonSchemas/ -o types/",
     "build": "run-p json2ts"
   },
   "keywords": [],
