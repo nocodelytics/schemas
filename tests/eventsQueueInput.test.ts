@@ -3,6 +3,10 @@ import { describe, test, expect } from "vitest";
 import eventsQueueInputSchema from "../jsonSchemas/eventsQueueInput.schema.json";
 
 import Ajv from "ajv";
+import addFormats from "ajv-formats";
+
+const ajv = new Ajv();
+addFormats(ajv);
 
 const base = {
   createdAt: "2018-11-13T20:20:39+00:00",
@@ -35,9 +39,12 @@ const valid = [
   { ...base, cl: 0, ci: 2 },
   { ...base, cl: 5, ci: 0 },
   { ...base, d: "test.com" },
+  { ...base, ip: "2a01:4b00:9d23:ab00:cc6e:66b:ea0:66b7" },
+  { ...base, ip: "137.220.105.106" },
+  { ...base, createdAt: "2018-11-13 20:20:39" },
 ];
 const invalid = [
-  { ...base, createdAt: "2018-11-13 20:20:39" },
+  { ...base, createdAt: "2018-11-13 25:20:39" },
   { ...base, s: "hello" },
   { ...base, t: "whatever" },
   { ...base, p: "clearly not a path" },
@@ -57,7 +64,6 @@ describe("eventsQueueInput", () => {
     ...valid.map((d) => [d, true]),
     ...invalid.map((d) => [d, false]),
   ])(".add(%o, %o)", (data, expected) => {
-    const ajv = new Ajv();
     const validate = ajv.compile(eventsQueueInputSchema);
     try {
       expect(validate(data)).toBe(expected);
