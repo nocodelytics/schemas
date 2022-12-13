@@ -42,8 +42,8 @@ export interface Event {
   form_submitted_at?: string;
   geo_ip_country?: string;
   geo_ip_city?: string;
-  geo_ip_latitude?: string;
-  geo_ip_longitude?: string;
+  geo_ip_latitude?: number;
+  geo_ip_longitude?: number;
   geo_ip_region?: string;
   geo_ip_eu?: boolean;
   geo_ip_timezone?: string;
