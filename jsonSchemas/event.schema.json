@@ -46,8 +46,7 @@
       "format": "uri"
     },
     "ip_address": {
-      "type": "string",
-      "format": "ip-address"
+      "type": "string"
     },
     "referer": {
       "type": "string",

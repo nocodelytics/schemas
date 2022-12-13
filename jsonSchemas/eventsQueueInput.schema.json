@@ -83,7 +83,7 @@
     },
     "ip": {
       "description": "The ip address that originated the event.",
-      "format": "ip-address"
+      "type": "string"
     }
   },
   "required": ["s", "createdAt", "t", "p", "v"]
