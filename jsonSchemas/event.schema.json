@@ -43,7 +43,7 @@
     },
     "path": {
       "type": "string",
-      "format": "uri"
+      "format": "uri-reference"
     },
     "ip_address": {
       "type": "string"
