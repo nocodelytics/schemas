@@ -116,10 +116,10 @@
       "type": "string"
     },
     "geo_ip_latitude": {
-      "type": "string"
+      "type": "number"
     },
     "geo_ip_longitude": {
-      "type": "string"
+      "type": "number"
     },
     "geo_ip_region": {
       "type": "string"
