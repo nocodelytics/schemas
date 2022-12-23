@@ -24,7 +24,10 @@
     },
     "slug": {
       "type": "string"
+    },
+    "fields": {
+      "type": "object"
     }
   },
-  "required": ["id", "created_at", "site_id", "name", "slug"]
+  "required": ["id", "created_at", "site_id", "name", "slug", "fields"]
 }
