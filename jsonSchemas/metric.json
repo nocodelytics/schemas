@@ -1,0 +1,49 @@
+{
+  "title": "metric",
+  "description": "A raw metric from the database",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "dashboard_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string"
+    },
+    "metric_type": {
+      "type": "string"
+    },
+    "css_selector": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "webflow_collection_id": {
+      "type": "string"
+    },
+    "cms_collection_id": {
+      "type": "string"
+    },
+    "breakdown_by": {
+      "type": "string"
+    },
+    "unique_visitor": {
+      "type": "boolean"
+    }
+  },
+  "required": ["id", "created_at", "updated_at", "name", "metric_type"]
+}
