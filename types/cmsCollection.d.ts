@@ -15,4 +15,7 @@ export interface CmsCollection {
   site_id: string;
   name: string;
   slug: string;
+  fields: {
+    [k: string]: unknown;
+  };
 }
