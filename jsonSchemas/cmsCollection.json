@@ -26,7 +26,46 @@
       "type": "string"
     },
     "fields": {
-      "type": "object"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Email",
+              "Set",
+              "Color",
+              "CommercePropTable",
+              "ItemRefSet",
+              "PlainText",
+              "Video",
+              "Link",
+              "CommercePrice",
+              "RichText",
+              "CommercePropValues",
+              "Number",
+              "EnumOption",
+              "ItemRef",
+              "Bool",
+              "Date",
+              "User",
+              "Phone",
+              "Option",
+              "SubscriptionPlan",
+              "ImageRef",
+              "FileRef"
+            ]
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "type", "slug"]
+      }
     }
   },
   "required": ["id", "created_at", "site_id", "name", "slug", "fields"]

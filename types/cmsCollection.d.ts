@@ -16,6 +16,31 @@ export interface CmsCollection {
   name: string;
   slug: string;
   fields: {
+    id: string;
+    type:
+      | "Email"
+      | "Set"
+      | "Color"
+      | "CommercePropTable"
+      | "ItemRefSet"
+      | "PlainText"
+      | "Video"
+      | "Link"
+      | "CommercePrice"
+      | "RichText"
+      | "CommercePropValues"
+      | "Number"
+      | "EnumOption"
+      | "ItemRef"
+      | "Bool"
+      | "Date"
+      | "User"
+      | "Phone"
+      | "Option"
+      | "SubscriptionPlan"
+      | "ImageRef"
+      | "FileRef";
+    slug: string;
     [k: string]: unknown;
-  };
+  }[];
 }
